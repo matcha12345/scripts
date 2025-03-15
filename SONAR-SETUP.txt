@@ -8,3 +8,5 @@ su - sonar
 cd /opt/sonarqube-8.9.6.50800/bin/linux/
 sh sonar.sh start
 sh sonar.sh status
+
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
