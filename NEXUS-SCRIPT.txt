@@ -1,5 +1,7 @@
 #create amazonlinux ec2 with t2.medium and 30 gb of ebs with port 8081 
 
+docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+
 sudo yum update -y
 sudo yum install wget -y
 sudo yum install java-17-amazon-corretto-jmods -y
