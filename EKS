@@ -46,6 +46,9 @@ eksctl version
 
 eksctl create cluster --name EKS-1 --region us-east-1 --nodegroup-name=node1
 
+# attach IAM for cluster
+eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster EKS-1 --approve
+
 eksctl create nodegroup \
   --cluster=EKS-1 \
   --region=us-east-1 \
