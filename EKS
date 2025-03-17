@@ -67,5 +67,10 @@ eksctl create nodegroup \
   --appmesh-access \
   --alb-ingress-access
 
+eksctl delete cluster --name EKS-1 --region us-east-1
+
+eksctl delete nodegroup --cluster=EKS-1 --name=node2 --region=us-east-1
+
+
 
 
