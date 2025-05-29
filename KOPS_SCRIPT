@@ -22,3 +22,10 @@ kops version
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 mv kubectl /usr/local/bin/ 
+
+# to create a bucket
+aws s3api create-bucket   --bucket lokesh1.k8s.local
+
+export KOPS_STATE_STORE=s3://bucket
+
+kops update cluster --name=rahams.k8s.local --yes
